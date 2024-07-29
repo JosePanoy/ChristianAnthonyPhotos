@@ -1,0 +1,119 @@
+.landscape-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    margin-top: 100px;
+    text-align: left;
+    position: relative; 
+    cursor: default;
+  }
+  
+  .landscape-container:hover .landscape-image {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+  }
+  
+  
+  .slick-slider {
+    position: relative;
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px;
+    color: #333;
+  }
+  
+  .landscape-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+  }
+  
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .landscape-container {
+      width: 90%;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .landscape-container {
+      width: 95%;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 25px;
+    }
+  
+    .landscape-image {
+      height: 40vh; 
+      border-radius: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .landscape-container {
+      width: 95%;
+      padding: 10px;
+      margin: 5px;
+      margin-bottom: -100px;
+    }
+  
+    .slick-prev,
+    .slick-next {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 20px;
+    }
+  
+    .landscape-image {
+      height: 30vh; 
+      border-radius: 6px;
+    }
+  }
+  
+
+  .slick-slide {
+    transition: opacity 1.5s ease-in-out; 
+  }
+  
+  .slick-slide img {
+    transition: opacity 1.5s ease-in-out; 
+  }
+  
+  .slick-slide.slick-active {
+    opacity: 1; 
+  }
+  
+  .slick-slide.slick-hidden {
+    opacity: 0; 
+  }
+  

@@ -1,0 +1,267 @@
+.top-content {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 250px;
+}
+
+.unique-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+.text-section {
+  max-width: 60%;
+  padding: 10px;
+}
+
+.text-section h1 {
+  font-size: 4.5rem;
+  cursor: default;
+}
+
+.text-section h3 {
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 87%);
+  margin-top: -30px;
+  cursor: default;
+}
+
+.text-section p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: hsl(0, 0%, 89%);
+  text-align: left;
+  cursor: default;
+}
+
+.social-contact {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1rem;
+  }
+  
+  .fb-logo {
+    width: 60px;
+  }
+  
+  .contact-button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1.25rem;
+    background-color: rgb(0, 59, 98);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .contact-button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .contact-button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .contact-button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+    60% {
+      left: 100%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .social-contact {
+      flex-direction: row;
+      justify-content: center;
+      gap: 0;
+    }
+    
+    .fb-logo {
+      width: 50px;
+    }
+    
+    .contact-button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-contact {
+      flex-direction: row;
+      justify-content: center;
+      gap: 0;
+    }
+    
+    .fb-logo {
+      width: 40px;
+    }
+    
+    .contact-button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  
+
+.image-section img {
+  width: 140%;
+  max-width: none;
+  height: auto;
+}
+
+.aesthetic-line {
+  margin-top: 30px;
+  height: 2px;
+  background: linear-gradient(to right, #000, #fff, #000);
+}
+
+@media (max-width: 768px) {
+  .unique-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .text-section h1 {
+    font-size: 3rem;
+  }
+
+  .text-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .aesthetic-line {
+    margin-top: 20px;
+  }
+
+  .image-section img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-section h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .text-section h3 {
+    font-size: 16px;
+  }
+
+  .text-section p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .aesthetic-line {
+    display: none;
+  }
+
+  .image-section img {
+    display: none;
+  }
+
+  .contact-button {
+    font-size: 0.6rem;
+  }
+
+  .top-content {
+    margin-bottom: 150px;
+  }
+}
+
+
+
+
+.social-contact {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem; 
+  }
+  
+  .fb-logo {
+    width: 60px; 
+    margin-right: .5rem; 
+  }
+  
+  .contact-button {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .contact-button:hover {
+    background-color: #0056b3; 
+  }
+  
+  .contact-button svg {
+    margin-right: 0.5rem;
+  }
