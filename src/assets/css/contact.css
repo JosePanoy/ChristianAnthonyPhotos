@@ -36,15 +36,17 @@
   }
   
   a {
-    color: inherit;
+    color:hsl(0, 0%, 92%);
     text-decoration: none;
+    cursor: default;
   }
   
   .contact-info-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 18px;
+    font-size: 10px;
+    color: hsl(0, 0%, 92%);
   }
   
   .contact-logo {
@@ -136,6 +138,7 @@
   @media (max-width: 768px) {
     .contact-content {
       flex-direction: column;
+      color: hsl(0, 0%, 92%);
     }
   
     .map-container {
@@ -150,6 +153,14 @@
   @media (max-width: 480px) {
     .contact-info-item {
       font-size: 16px;
+      color: hsl(0, 0%, 92%);
+    }
+
+    a {
+        color: hsl(0, 0%, 92%);
+    }
+    .contact-info-item {
+        color: hsl(0, 0%, 92%);
     }
   
     textarea {
