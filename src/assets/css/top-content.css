@@ -9,7 +9,7 @@
   border: 1px solid gray;
   border-radius: 5px;
   position: relative;
-  overflow: hidden;
+
 }
 
 .unique-container {
@@ -301,6 +301,7 @@
     width: 100%;
     height: auto;
     margin: 60px auto 150px auto;
+    border: none;
   }
 
   .unique-container {
@@ -362,6 +363,7 @@
     width: 110%;
     margin: 100px -5% 100px -5%;
     height: 500px;
+    border: none;
   }
 
   .unique-container {
@@ -424,6 +426,7 @@
     width: 110%;
     margin: 100px -5% 100px -5%;
     height: 500px;
+    border: none;
   }
 
   .unique-container {
@@ -486,6 +489,7 @@
     width: 110%;
     margin: 100px -5% 100px -5%;
     height: 500px;
+    border: none;
   }
 
   .unique-container {
