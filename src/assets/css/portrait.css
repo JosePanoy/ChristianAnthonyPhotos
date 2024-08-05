@@ -1,86 +1,61 @@
 .portrait-container {
-    width: 90%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 170px;
-    text-align: left;
-    cursor: default;
-    margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 170px;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.cell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+  height: 480px;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.cell img.fade {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .portrait-container {
+    width: calc(100% + 30px);
+    margin-left: -15px;
   }
-  
-  .slick-slide {
-    transition: transform 0.5s ease;
+
+  .cell {
+    height: 300px;
   }
-  
-  .slide {
-    position: relative;
-    width: 100%;
-    padding: 0 15px;
+}
+
+@media (max-width: 480px) {
+  .portrait-container {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-bottom: 100px;
+    
   }
-  
-  .slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
-    border: none;
-    outline: none;
+
+  .cell {
+    height: 270px;
   }
-  
-  .slick-center .slide img {
-    transform: scale(1.1);
-    filter: none;
-  }
-  
-  .slick-slide:not(.slick-center) .slide img {
-    transform: scale(0.9);
-    filter: blur(3px);
-    opacity: 0.6;
-    height: 500px;
-  }
-  
-  @media (max-width: 768px) {
-    .portrait-container {
-      width: calc(100% + 30px);
-      margin-left: -15px;
-    }
-  
-    .slick-slide img {
-      width: 100%; 
-      height: auto;
-      object-fit: cover;
-    }
-  
-    .slick-slide:not(.slick-center) .slide img {
-      height: auto;
-    }
-  
-    .slick-center .slide img {
-      transform: scale(1.05);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .portrait-container {
-      width: calc(100% + 40px);
-      margin-left: -20px;
-      border-radius: 8px;
-      font-size: 12px;
-      margin-bottom: 120px;
-    }
-  
-    .slick-slide img {
-      width: 100%; 
-      height: 140px;
-      object-fit: cover;
-    }
-  
-    .slick-slide:not(.slick-center) .slide img {
-      height: auto;
-    }
-  
-    .slick-center .slide img {
-      transform: scale(1.02);
-    }
-  }
-  
+}

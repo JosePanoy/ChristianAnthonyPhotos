@@ -1,10 +1,17 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
+
 import '../src/assets/css/top-content.css';
 import ProfilePic from '../src/assets/img/profile.png';
 import FbLogo from '../src/assets/img/fblogo.gif';
 
 function TopContent() {
+
+  const { ref, inView } = useInView({
+    triggerOnce: false, 
+    threshold: 0.1,
+  });
 
   const fadeInLeft1 = useSpring({
     opacity: 1,
@@ -46,7 +53,7 @@ function TopContent() {
   });
 
   return (
-    <div className="top-content">
+    <animated.div ref={ref} className="top-content" style={fadeInImage}>
       <div className="unique-container">
         <div className="text-section">
           <animated.h1 style={fadeInLeft1}>Christian Anthony Photos</animated.h1>
@@ -69,7 +76,7 @@ function TopContent() {
           <animated.img src={ProfilePic} alt="Christian Anthony" style={fadeInImage} />
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

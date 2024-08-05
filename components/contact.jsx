@@ -62,11 +62,11 @@ function Contact() {
           </div>
           <div className="contact-info-item">
             <img src={phonelogo} alt="Phone" className="contact-logo" />
-            <span style={{cursor: "default"}}>(+123) 456-7890</span>
+            <span style={{cursor: "default"}}>0946 220 9589</span>
           </div>
           <div className="contact-info-item">
             <img src={maillogo} alt="Email" className="contact-logo" />
-            <a href="mailto:example@example.com">example@example.com</a>
+            <a href="mailto:example@example.com">Christiananthonyalejandeleon@gmail.com</a>
           </div>
 
           <textarea placeholder="Message here!"></textarea>
