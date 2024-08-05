@@ -178,3 +178,38 @@
     }
   }
   
+
+  @media (max-width: 376px) {
+
+    .contact-info-item {
+      font-size: 13px;
+      color: hsl(0, 0%, 92%);
+    }
+
+    a {
+        color: hsl(0, 0%, 92%);
+    }
+    .contact-info-item {
+        color: hsl(0, 0%, 92%);
+    }
+  
+    textarea {
+      height: 80px;
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+
+    .contact-container {
+        width: 90%;
+        margin: 5px auto;
+    }
+    h3 {
+      font-size: 13px;
+    }
+
+
+  }
+  
