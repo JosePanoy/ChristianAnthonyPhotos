@@ -58,7 +58,7 @@ function Contact() {
           </div>
           <div className="contact-info-item">
             <img src={messengerlogo} alt="Messenger" className="contact-logo" />
-            <a href="https://www.facebook.com/messages/t/110466253902330" target="_blank" rel="noopener noreferrer">Messenger</a>
+            <a href="https://www.facebook.com/messages/e2ee/t/7497245243645115" target="_blank" rel="noopener noreferrer">Messenger</a>
           </div>
           <div className="contact-info-item">
             <img src={phonelogo} alt="Phone" className="contact-logo" />

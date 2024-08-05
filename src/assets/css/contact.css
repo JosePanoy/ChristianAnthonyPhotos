@@ -38,7 +38,7 @@
   a {
     color:hsl(0, 0%, 92%);
     text-decoration: none;
-    cursor: default;
+    cursor: pointer;
   }
   
   .contact-info-item {
