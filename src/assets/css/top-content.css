@@ -8,6 +8,8 @@
   margin: 50px auto 250px auto;
   border: 1px solid gray;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
 }
 
 .unique-container {
