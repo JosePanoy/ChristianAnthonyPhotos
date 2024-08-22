@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import HomePage from '../components/home.jsx'
+import Navbar from '../components/navbar.jsx'
 import TopContent from '../components/top-content.jsx'
-import LandScape from '../components/landscape.jsx'
-import Portrait from '../components/portrait.jsx'
-import Contact from '../components/contact.jsx'
+import MidContent from '../components/mid-content.jsx'
+
 import './App.css'
 
 function App() {
@@ -11,11 +10,10 @@ function App() {
 
   return (
     <>
-    <HomePage />
+    <Navbar />
     <TopContent />
-    <LandScape />
-    <Portrait />
-    <Contact />
+    <MidContent />
+
     </>
   )
 }
