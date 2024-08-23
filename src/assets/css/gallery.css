@@ -153,6 +153,9 @@ button:hover .button-text {
         width: 100%;
         max-width: 300px;
     }
+    .gallery-container p {
+        padding: 10px;
+    }
 }
 
 /* Tablet styles */
@@ -167,6 +170,9 @@ button:hover .button-text {
     button.learn-more {
         width: 12rem;
         max-width: 100%;
+    }
+    .gallery-container p {
+        padding: 5px;
     }
 }
 
