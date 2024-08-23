@@ -20,8 +20,24 @@ import L13 from '../src/assets/img/landscape/l13.jpg';
 import L14 from '../src/assets/img/landscape/l14.jpg';
 import L15 from '../src/assets/img/landscape/l15.jpg';
 import L16 from '../src/assets/img/landscape/l16.jpg';
+import L17 from '../src/assets/img/landscape/l17.jpg';
+import L18 from '../src/assets/img/landscape/l18.jpg';
+import L19 from '../src/assets/img/landscape/l19.jpg';
+import L20 from '../src/assets/img/landscape/l20.jpg';
+import L21 from '../src/assets/img/landscape/l21.jpg';
+import L22 from '../src/assets/img/landscape/l22.jpg';
+import L23 from '../src/assets/img/landscape/l23.jpg';
+import L24 from '../src/assets/img/landscape/l24.jpg';
+import L25 from '../src/assets/img/landscape/l25.jpg';
+import L26 from '../src/assets/img/landscape/l26.jpg';
+import L27 from '../src/assets/img/landscape/l27.jpg';
+import L28 from '../src/assets/img/landscape/l28.jpg';
+import L29 from '../src/assets/img/landscape/l29.jpg';
+import L30 from '../src/assets/img/landscape/l30.jpg';
+import L31 from '../src/assets/img/landscape/l31.jpg';
+import L32 from '../src/assets/img/landscape/l32.jpg';
 
-const photos = [L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L12, L13, L14, L15, L16];
+const photos = [L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L12, L13, L14, L15, L16, L17, L18, L19, L20, L21, L22, L23, L24, L25, L26, L27, L28, L29, L30, L31, L32];
 
 function LandScape() {
   const { ref, inView } = useInView({
@@ -48,7 +64,7 @@ function LandScape() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1300,
+    autoplaySpeed: 1000,
     pauseOnHover: true,
     adaptiveHeight: true,
     fade: true,
