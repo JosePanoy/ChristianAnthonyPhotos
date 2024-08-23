@@ -33,7 +33,12 @@ function TopContent() {
         <animated.div ref={ref} className="top-content">
             <animated.div style={fadeInLeft1} className="top-content-text">
                 <animated.h2 style={fadeInFromBottom1}>Christian Anthony Photos</animated.h2>
-                <animated.p style={fadeInFromBottom2}>Wedding, Lifestyles & Events</animated.p>
+
+
+            
+                <animated.div style={fadeInFromBottom2} className="glitch" data-glitch="Wedding, Lifestyles & Events">Wedding, Lifestyles & Events</animated.div>
+
+
             </animated.div>
         </animated.div>
     );
