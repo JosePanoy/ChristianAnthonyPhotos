@@ -41,7 +41,7 @@ function GalleryPage() {
                         <span className="button-text">Portrait Images</span>
                     </button>
                 </div>
-                <p>Scroll through a selection of our favorite photos. We use tools of documentary reportage, portraiture, fashion photography and filmmaking.</p>
+                <p>Explore a curated selection of our favorite photos, showcasing our expertise in documentary reportage, portraiture, fashion photography, and filmmaking.</p>
                 <div ref={contentRef} style={{ marginTop: '50px' }} />
             </div>
             {selectedCategory === 'landscape' && <LandScape />}
