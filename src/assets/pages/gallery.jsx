@@ -11,7 +11,7 @@ function GalleryPage() {
 
     const handleClick = (category) => {
         setSelectedCategory(category);
-        // Scroll to the content after state update
+ 
         setTimeout(() => {
             if (contentRef.current) {
                 contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });

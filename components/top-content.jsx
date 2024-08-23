@@ -35,8 +35,9 @@ function TopContent() {
                 <animated.h2 style={fadeInFromBottom1}>Christian Anthony Photos</animated.h2>
 
 
-            
-                <animated.div style={fadeInFromBottom2} className="glitch" data-glitch="Wedding, Lifestyles & Events">Wedding, Lifestyles & Events</animated.div>
+                <animated.div  class="glitch-wrapper">
+                <animated.div style={fadeInFromBottom2} class="glitch" data-glitch="Wedding, Lifestyles & Events">Wedding, Lifestyles & Events</animated.div>
+                </animated.div>
 
 
             </animated.div>
