@@ -9,9 +9,33 @@
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
+
+.intro-content {
+    margin-bottom: 100px;
+}
+
+.intro-content h2 {
+    color: hsl(0, 0%, 13%);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    cursor: default;
+}
+
+.gallery-container p {
+    color: #e9e9e9;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: default;
+}
+
+
 
 .btns {
     background: rgba(255, 255, 255, 0.385);

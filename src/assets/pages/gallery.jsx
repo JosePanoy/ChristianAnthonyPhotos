@@ -23,6 +23,10 @@ function GalleryPage() {
         <>
             <Navbar />
             <div className="gallery-container">
+                <div style={{marginTop: '-100px'}} className="intro-content">
+                    <h2>The Gallery</h2>
+                   
+                </div>
                 <div className="btns">
                     <button className="learn-more" onClick={() => handleClick('landscape')}>
                         <span className="circle" aria-hidden="true">
@@ -37,7 +41,7 @@ function GalleryPage() {
                         <span className="button-text">Portrait Images</span>
                     </button>
                 </div>
-
+                <p>Scroll through a selection of our favorite photos. We use tools of documentary reportage, portraiture, fashion photography and filmmaking.</p>
                 <div ref={contentRef} style={{ marginTop: '50px' }} />
             </div>
             {selectedCategory === 'landscape' && <LandScape />}
