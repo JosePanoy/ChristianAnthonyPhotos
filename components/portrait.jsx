@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../src/assets/css/portrait.css';
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
@@ -17,46 +17,30 @@ import p10 from '../src/assets/img/portrait/p10.jpg';
 const images = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
 
 function Portrait() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fadeEffect, setFadeEffect] = useState(true);
+  return (
+    <div className="portrait-grid">
+      {images.map((img, index) => (
+        <FadeInImage key={index} src={img} />
+      ))}
+    </div>
+  );
+}
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeEffect(false); 
-      setTimeout(() => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-        setFadeEffect(true); 
-      }, 1000);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const getImageForSlot = (offset) => {
-    return images[(currentIndex + offset) % images.length];
-  };
-
+function FadeInImage({ src }) {
   const { ref, inView } = useInView({
-    triggerOnce: false, 
-    threshold: 0.1,
+    triggerOnce: false,
+    threshold: 0.1
   });
 
-  const fadeSpring = useSpring({
+  const props = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateX(0)' : 'translateX(-100px)',
-    config: { duration: 850 },
+    transform: inView ? 'translateX(0)' : 'translateX(-50px)',
+    config: { tension: 280, friction: 60, duration: 500 }
   });
 
   return (
-    <animated.div className="portrait-container" ref={ref} style={fadeSpring}>
-      <h2>Portrait Photos</h2>
-      <div className="grid">
-        {[0, 1, 2, 3].map(index => (
-          <div className="cell" key={index}>
-            <img src={getImageForSlot(index)} alt={`Portrait ${index + 1}`} className={`fade ${fadeEffect ? 'fade-in' : 'fade-out'}`} />
-          </div>
-        ))}
-      </div>
+    <animated.div className="portrait-item" ref={ref} style={props}>
+      <img src={src} alt="" />
     </animated.div>
   );
 }

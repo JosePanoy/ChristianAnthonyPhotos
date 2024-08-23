@@ -12,52 +12,9 @@ import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 
 function BottomComponent() {
-
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.1,
-    });
-
-    const fadeInFromBottom1 = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(70px)',
-        config: { duration: 1000 },
-        delay: 300,
-    });
-
-    const fadeInFromBottom2 = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(70px)',
-        config: { duration: 1000 },
-        delay: 600,
-    });
-
-    const fadeInFromBottom3= useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(70px)',
-        config: { duration: 1000 },
-        delay: 900,
-    });
-
-    const fadeInFromBottom4 = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(70px)',
-        config: { duration: 1000 },
-        delay: 1200,
-    });
-
-    const fadeInFromBottom5 = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(70px)',
-        config: { duration: 1000 },
-        delay: 1500,
-    });
-
-    const fadeInFromBottom6 = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(70px)',
-        config: { duration: 1000 },
-        delay: 1800,
     });
 
     const fadeInFromLeft = useSpring({
@@ -66,7 +23,35 @@ function BottomComponent() {
         config: { duration: 1000 },
         delay: 300,
     });
-    
+
+    const Box = ({ src, alt, href, delay }) => {
+        const { ref: boxRef, inView: boxInView } = useInView({
+            triggerOnce: false,
+            threshold: 0.1,
+        });
+
+        const fadeInFromBottom = useSpring({
+            opacity: boxInView ? 1 : 0,
+            transform: boxInView ? 'translateY(0)' : 'translateY(70px)',
+            config: { duration: 1000 },
+            delay,
+        });
+
+        return (
+            <animated.a
+                ref={boxRef}
+                style={fadeInFromBottom}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="box"
+            >
+                <img src={src} alt={alt} />
+                <FaRegCopy className="copy-icon" />
+            </animated.a>
+        );
+    };
+
     return (
         <>
             <animated.div ref={ref} className="bottom-container">
@@ -74,30 +59,12 @@ function BottomComponent() {
                     Providing professional photography services for weddings, lifestyle shoots, events, and burials. We specialize in capturing the essence of each moment with precision and care, ensuring your memories are beautifully preserved for a lifetime.
                 </animated.div>
                 <div className="bottom-boxes">
-                    <animated.a style={fadeInFromBottom1} href="https://www.facebook.com/media/set/?set=a.936704545129681&type=3" target="_blank" rel="noopener noreferrer" className="box">
-                        <img src={pic1} alt="Portrait 1" />
-                        <FaRegCopy className="copy-icon" />
-                    </animated.a>
-                    <animated.a style={fadeInFromBottom2} href="https://www.facebook.com/media/set/?set=a.942202194579916&type=3" target="_blank" rel="noopener noreferrer" className="box">
-                        <img src={pic2} alt="Portrait 2" />
-                        <FaRegCopy className="copy-icon" />
-                    </animated.a>
-                    <animated.a style={fadeInFromBottom3} href="https://www.facebook.com/media/set/?set=a.1002273608572774&type=3" target="_blank" rel="noopener noreferrer" className="box">
-                        <img src={pic3} alt="Portrait 3" />
-                        <FaRegCopy className="copy-icon" />
-                    </animated.a>
-                    <animated.a style={fadeInFromBottom4} href="https://www.facebook.com/media/set/?set=a.984658023667666&type=3" target="_blank" rel="noopener noreferrer" className="box">
-                        <img src={pic4} alt="Portrait 4" />
-                        <FaRegCopy className="copy-icon" />
-                    </animated.a>
-                    <animated.a style={fadeInFromBottom5} href="https://www.facebook.com/media/set/?set=a.961691945964274&type=3" target="_blank" rel="noopener noreferrer" className="box">
-                        <img src={pic5} alt="Portrait 5" />
-                        <FaRegCopy className="copy-icon" />
-                    </animated.a>
-                    <animated.a style={fadeInFromBottom6} href="https://www.facebook.com/media/set/?set=a.967054408761361&type=3" target="_blank" rel="noopener noreferrer" className="box">
-                        <img src={pic6} alt="Portrait 6" />
-                        <FaRegCopy className="copy-icon" />
-                    </animated.a>
+                    <Box src={pic1} alt="Portrait 1" href="https://www.facebook.com/media/set/?set=a.936704545129681&type=3" delay={300} />
+                    <Box src={pic2} alt="Portrait 2" href="https://www.facebook.com/media/set/?set=a.942202194579916&type=3" delay={600} />
+                    <Box src={pic3} alt="Portrait 3" href="https://www.facebook.com/media/set/?set=a.1002273608572774&type=3" delay={900} />
+                    <Box src={pic4} alt="Portrait 4" href="https://www.facebook.com/media/set/?set=a.984658023667666&type=3" delay={1200} />
+                    <Box src={pic5} alt="Portrait 5" href="https://www.facebook.com/media/set/?set=a.961691945964274&type=3" delay={1500} />
+                    <Box src={pic6} alt="Portrait 6" href="https://www.facebook.com/media/set/?set=a.967054408761361&type=3" delay={1800} />
                 </div>
             </animated.div>
         </>

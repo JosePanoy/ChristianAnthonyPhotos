@@ -42,22 +42,21 @@ function LandScape() {
   });
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 1300,
     pauseOnHover: true,
     adaptiveHeight: true,
     fade: true,
-    arrows: false
+    arrows: false,
   };
 
   return (
     <animated.div ref={ref} style={fadeInImage} className="landscape-container">
-      <animated.h2 style={fadeInHeading}>Landscape Photos</animated.h2>
       <Slider {...settings}>
         {photos.map((photo, index) => (
           <div key={index}>
