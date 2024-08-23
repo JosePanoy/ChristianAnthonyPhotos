@@ -54,6 +54,7 @@
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
     .component2-container {
         padding: 10px;
+        margin-top: 70px;
     }
 
     .component2-top-image {
@@ -68,6 +69,7 @@
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .component2-container {
         padding: 10px;
+        margin-top: 70px;
     }
 
     .component2-top-image {
